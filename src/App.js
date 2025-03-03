@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Form } from "react-bootstrap";
+import { useState } from "react";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  /*const [message, setMessage] = useState();*/
+
+  const click_boom = () => {
+    alert("Hai premuto il bottone!");
+  };
+
+   return (
+    <div class="container">
+  <div class="img-container">
+    <img class="img-centered" src="demo_site_img.jpg" alt="Logo"></img>
+    <span class="label-centered">Login</span>
+    <textarea id="textarea" class="textbox-centered"></textarea>
+  </div>
+</div>
   );
 }
 

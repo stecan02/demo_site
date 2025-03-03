@@ -1,38 +1,88 @@
-.App {
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-image:linear-gradient(rgb(0, 0, 0),rgb(0, 0, 63),rgb(2, 2, 201))
+}
+
+/*.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+}*/
+
+.centered-element {
+  width:40%;
+  max-width: 200px;
   text-align: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+  border-radius: 20px 20px 20px 20px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/*.centered-element {
+  width: 40%;     
+  max-width: 200px; 
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 20px;
+}*/
+
+/*-----------------------------------*/
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.img-container {
+  position: relative; /* Questo div diventa il riferimento per la label */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  top: -20%;
 }
 
-.App-link {
-  color: #61dafb;
+.img-centered {
+  width: 22vw; /* La larghezza è il 30% della larghezza della finestra */
+  aspect-ratio: 16 / 16;
+  top: 30%; /* La distanza dall'alto sarà il 30% della finestra */
+  border-radius: 2.2vh; /* Arrotonda gli angoli in modo proporzionale */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.label-centered {
+  position: absolute;
+  top: 110%;
+  font-size: 3.5vw;
+  white-space: nowrap;
+  font-family:Arial, Helvetica, sans-serif;
+  color:white;
+}
+
+.textbox-centered {
+  position: absolute;
+  top: 130%; /* Si posiziona sotto l’immagine */
+  font-size: 3.5vw; /* Font scalabile in base alla larghezza dello schermo */
+  height: 3.3vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(0, 0, 0);
+  resize: none;
+  outline: none;
+}
+
+#textarea:focus {
+  border-color: rgb(0, 0, 0);
 }
